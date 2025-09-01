@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Chanderkant</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="flex s-around bg-color">
+        <div class="left-nav">
+            <h2 class="t-white"> Portfolio</h2>
+        </div>
+        <div class="right-nav">
+            <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
+            <li><a href="#projects" class="t-white roboto">Projects <i class="fa-solid fa-diagram-project"></i></a></li>
+            <li><a href="#contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="flex s-around m-auto">
+        <div class="home-left flex items-center">
+            <div class="home">
+                <h4 class="poplines">Hi, I'm</h4>
+                <h1 class="name">Chanderkant</h1>
+                 <h6>"My name might sound a little unique —  It was lovingly given to me by my grandfather, who is no longer in this world. Though he has gone, the name he chose for me lives on, carrying his love and blessings forever."</h6>
+                <h4 class="poplines">Django full-stack Developer</h6>
+                
+                <a href="{% static 'pdf/chanderkant_BCA_.docx' %}"Download="chanderkant_BCA_.docx">
+                    <button class="btn poplines">Download Resume (PDF)</button>
+                </a>
+                <a class="btn live poplines" href="#contact">Let's Talk</a>
+            </div>
+        </div>
+        <div class="home-right flex s-center items-center">
+            <div class="circle flex s-center items-center" id="mainimage">
+                <img  src=" {% static 'image/otg.jpg' %}" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="t-center my-2 t-white f-2">About Me</h1>
+        <div class="about container flex s-around">
+            <div class="about-left flex s-center items-center">
+                <img src="{% static 'image/download.png' %}" alt="About Image">
+            </div>
+            <div class="about-right flex">
+                <div class="about-content">
+                  
+                    <p class="fontchange">
+                        Motivated and tech-savvy BCA student with a strong foundation in programming, data structures, and web development. Eager to apply my skills in real-world projects and gain hands-on experience in software development and IT support.</p>
+                    <a class="btn" id="hireme" href="#contact">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="skills-section">
+  <h2>My Skills</h2>
+
+  <div class="skill">
+    <p>Core Python</p>
+    <div class="skill-bar">
+      <div class="skill-level python">80%</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>HTML</p>
+    <div class="skill-bar">
+      <div class="skill-level html">100%</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>CSS</p>
+    <div class="skill-bar">
+      <div class="skill-level css">80%</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>Django</p>
+    <div class="skill-bar">
+      <div class="skill-level django">90%</div>
+    </div>
+  </div>
+</div>
+    </section>
+
+    <!-- Contact Section -->
+   <section id="contact" class="contact-section">
+  <h2 class="section-title">Contact Me</h2>
+
+  <div class="contact-card">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-row">
+        <input type="email" name="email" placeholder="Enter your email address" required>
+      </div>
+      <div class="form-row">
+        <input type="tel" name="number" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-row">
+        <textarea name="content" rows="5" placeholder="Enter your message"></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send</button>
+    </form>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="flex s-center u-80 m-auto my-2 res">
+            <li><a href="#home" class="poplines">Home</a></li>
+            <li><a href="#about" class="poplines">About Me</a></li>
+            <li><a href="#skills" class="poplines">Skills</a></li>
+            <li><a href="#projects" class="poplines">Projects</a></li>
+            <li><a href="#portfolio" class="poplines">Portfolio</a></li>
+        </ul>
+        <ul class="flex s-center u-80 font-awesome">
+            <li><a href="https://github.com/Chanderkant496/Chanderkant496" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/chander-kant-028543333/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/ck_dhiman_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@Ckdhiman_123" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+        </ul>
+        <p class="t-center my-2 poplines">&copy; All Rights Reserved | <span class="cpy-white poplines">Chanderkant</span></p>
+    </footer>
+</body>
+</html>
