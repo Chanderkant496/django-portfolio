@@ -7,7 +7,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # -------- SECURITY SETTINGS --------
 SECRET_KEY = "django-insecure-local-key-for-testing-only"
 DEBUG = True
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]  # ✅ sirf local ke liye
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ]
+
 
 # -------- INSTALLED APPS --------
 INSTALLED_APPS = [
