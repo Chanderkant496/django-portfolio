@@ -9,8 +9,13 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-local-key-for-testing
 
 DEBUG = False
 
-# IMPORTANT: Allow Render domain
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,django-portfolio-3euw.onrender.com").split(",")
+# IMPORTANT: Allow Render domai
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.onrender.com'
+]
+
 
 
 
